@@ -9,19 +9,19 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint','react-refresh'],
+  plugins: ['@typescript-eslint', 'react-refresh'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
-    project: './tsconfig.json',
+    project: './tsconfig.eslint.json',
   },
   rules: {
     'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
+      'warn',
+      { allowConstantExport: true },
     ],
   },
-};
+}
