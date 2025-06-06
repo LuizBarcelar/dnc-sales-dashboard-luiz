@@ -1,4 +1,5 @@
 export * from './BannerImage'
+export * from './CardComponent'
 export * from './Logo'
 export * from './StyledButton'
 export * from './StyledInput'
