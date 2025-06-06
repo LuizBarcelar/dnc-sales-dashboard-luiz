@@ -1,6 +1,6 @@
-import type { Theme } from '@/types'
+import type { DefaultTheme } from 'styled-components'
 
-export const darkTheme: Theme = {
+export const darkTheme: DefaultTheme = {
   appBackground: '#060B26',
   appColor: '#FFF',
   appDefaultStroke: '#21497D',
@@ -32,6 +32,9 @@ export const darkTheme: Theme = {
     disabledBorderColor: '#2E3F55',
     disabledColor: '#58677C',
     placeholderColor: '#89A7CE',
+    background: '',
+    color: '',
+    border: '',
   },
   typographies: {
     error: '#FF0202',
@@ -40,7 +43,7 @@ export const darkTheme: Theme = {
   },
 }
 
-export const lighTheme: Theme = {
+export const lightTheme: DefaultTheme = {
   appBackground: '#FFF',
   appColor: '#000',
   appDefaultStroke: '#E0E0E0',
@@ -72,6 +75,9 @@ export const lighTheme: Theme = {
     disabledBorderColor: '#E0E0E0',
     disabledColor: '#666',
     placeholderColor: '#666',
+    background: '',
+    color: '',
+    border: '',
   },
   typographies: {
     error: '#FF0202',
