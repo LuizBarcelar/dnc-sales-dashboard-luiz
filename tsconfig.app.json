@@ -27,5 +27,11 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/styled.d.ts",
+    "vite.config.ts",
+    "jest.config.ts",
+    "jest.setup.ts"
+  ]
 }
