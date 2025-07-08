@@ -10,7 +10,7 @@ import { BannerImage, Logo, StyledH1, StyledP } from '@/components'
 import FormComponent from '@/components/FormComponent'
 
 // HOOKS
-import { useFormValidation, usePost } from '@/hooks'
+import { useFormValidation, useGet, usePost } from '@/hooks'
 
 // UTILS
 import { jwtExpirationDateConverter, pxToRem } from '@/utils'
@@ -21,11 +21,13 @@ import type {
   MessageProps,
   LoginData,
   LoginPostData,
+  HighlightsData,
 } from '@/types'
 
 // REDUX
 import { useSelector } from 'react-redux'
 import type { RootState } from '@/redux'
+import { Link } from 'react-router-dom'
 
 function Login() {
   const navigate = useNavigate()
@@ -56,6 +58,8 @@ function Login() {
         }
     }
   }
+
+  useGet<HighlightsData[]>('sales/highlights')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -119,6 +123,12 @@ function Login() {
                 ]}
                 message={handleMessage()}
               />
+              <Link
+                to={'/cadastro'}
+                style={{ textDecoration: 'none', color: '#1976d2' }}
+              >
+                Fazer cadastro
+              </Link>
             </Container>
           </Grid>
           <Grid item sm={6} sx={{ display: { xs: 'none', sm: 'block' } }}>
